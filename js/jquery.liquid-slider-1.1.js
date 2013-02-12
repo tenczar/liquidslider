@@ -40,7 +40,7 @@ if (typeof Object.create !== 'function') {
 			self.$sliderId = $(self.sliderId);
 
 			// Set the options
-			self.options = $.extend({}, $.fn.liquidSlider.options, options);
+			self.options = $.extend({}, $.fn.liquidSlider.options, options, self.$elem.data("options"));
 
 			// Variable for the % sign if needed (responsive), otherwise px
 			self.pSign =  (self.options.responsive) ? '%' : 'px';
